@@ -3,13 +3,15 @@ import sys
 OFFSET_BOOTLOADER = 0x1000
 OFFSET_PARTITIONS = 0x8000
 OFFSET_APPLICATION = 0x10000
+OFFSET_DATA = 0x200000
 
 files_in = [
     ("bootloader", OFFSET_BOOTLOADER, sys.argv[1]),
     ("partitions", OFFSET_PARTITIONS, sys.argv[2]),
     ("application", OFFSET_APPLICATION, sys.argv[3]),
+    ("data", OFFSET_DATA, sys.argv[4]),
 ]
-file_out = sys.argv[4]
+file_out = sys.argv[5]
 
 cur_offset = OFFSET_BOOTLOADER
 with open(file_out, "wb") as fout:

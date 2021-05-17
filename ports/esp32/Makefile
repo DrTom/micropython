@@ -36,6 +36,7 @@ all:
 		$(BUILD)/bootloader/bootloader.bin \
 		$(BUILD)/partition_table/partition-table.bin \
     		$(BUILD)/micropython.bin \
+				$(BUILD)/../../../../tmp/fs.bin \
     		$(BUILD)/firmware.bin
 
 $(BUILD)/bootloader/bootloader.bin $(BUILD)/partition_table/partition  -table.bin $(BUILD)/micropython.bin: FORCE
